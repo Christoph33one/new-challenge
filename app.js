@@ -1,6 +1,6 @@
 const boxes = Array.from(document.getElementsByClassName('box'));
 console.log(boxes);
-
+const playText = document.getElementById('playText');
 const spaces = [null, null, null, null, null, null, null, null, null];
 const PLAYER_ONE = "O"; 
 const PLAYER_TWO = "X";
@@ -33,9 +33,51 @@ const boxClicked = (e) => {
     if(!spaces[id]){
         spaces[id] = currentPlayer;
         e.target.innerText = currentPlayer;
+
+        if(playerHasWon()){
+            playText.innerText = `${currentPlayer} has won!`;
+            return;
+        }
         currentPlayer = currentPlayer == PLAYER_ONE ? PLAYER_TWO : PLAYER_ONE;
     }
 };
+
+const playerHasWon = () => {
+    if(spaces[0] == currentPlayer){
+        if(spaces[1] == currentPlayer && spaces[2] == currentPlayer){
+            console.log(`${currentPlayer} wins up top`)
+            return true;
+        }
+        if(spaces[3] == currentPlayer && spaces[6] == currentPlayer){
+            console.log(`${currentPlayer} wins on the left`)
+            return true;
+        }
+        if(spaces[4] == currentPlayer && spaces[8] == currentPlayer){
+            console.log(`${currentPlayer} wins diagonal`)
+            return true;
+        }
+    } 
+    if (spaces[8] == currentPlayer){
+        if(spaces[2] == currentPlayer && spaces[5] == currentPlayer){
+            console.log(`${currentPlayer} wins on the right`)
+            return true;
+        }
+        if(spaces[6] == currentPlayer && spaces[7] == currentPlayer){
+            console.log(`${currentPlayer} wins on the bottom`)
+            return true;
+        }
+    }
+    if (spaces[4] == currentPlayer){
+        if(spaces[1] == currentPlayer && spaces[7] == currentPlayer){
+            console.log(`${currentPlayer} wins vertically in the middel`)
+            return true;
+        }
+        if(spaces[3] == currentPlayer && spaces[5] == currentPlayer){
+            console.log(`${currentPlayer} wins horizontally in the middel `)
+            return true;
+        }
+    }
+}
 
 drawBoard();
 
