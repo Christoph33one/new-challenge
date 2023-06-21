@@ -41,7 +41,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 150px;
-color: var(--purple);
+color: var(--purple); 
+font-size: 150px;
 }
 
 .box:hover {
