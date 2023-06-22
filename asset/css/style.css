@@ -40,7 +40,6 @@ width: 150px;
 display: flex;
 justify-content: center;
 align-items: center;
-font-size: 150px;
 color: var(--purple); 
 font-size: 150px;
 }
