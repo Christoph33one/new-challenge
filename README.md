@@ -8,4 +8,5 @@ The game starts with an empty grid, and players alternate placing their respecti
 Tic Tac Toe is a simple yet engaging game that can be played by people of all ages. It offers opportunities for strategic thinking, planning ahead, and adapting to the opponent's moves. Its straightforward rules and quick gameplay make it a popular choice for casual entertainment and as a teaching tool for introducing basic concepts of game theory.
 
 Please feel feel to give it a go!
-<a href=" https://christoph33one.github.io/new-challenge/">Tic Tack Toe</a>
+
+[Click to play](https://christoph33one.github.io/new-challenge/)
