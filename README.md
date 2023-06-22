@@ -10,3 +10,5 @@ Tic Tac Toe is a simple yet engaging game that can be played by people of all ag
 Please feel feel to give it a go!
 
 [Click to play](https://christoph33one.github.io/new-challenge/)
+
+![](asset/images/tick%20tac%20toe%20game.png)
